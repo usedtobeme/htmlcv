@@ -1,0 +1,66 @@
+{
+  "en": {
+    "profileInfo": {
+      "name": "Ivan Amortegui",
+      "id": "80.039.249",
+      "idType": "CC"
+    },
+    "contactInfo": {
+      "address": "Calle 56 # 35a - 56 Apt 501",
+      "city": "Bogota, Colombia",
+      "phone": "(+571) 3873612",
+      "cellPhone": "(+57) 3002829854"
+    },
+    "profile": {
+      "profile": "I am a creative and curious person, driven by digital product design, development and management. Experienced front end developer, currently involved in technical leadership and product management."
+    },
+    "experience": [
+      {
+        "startingDate": 1501574400,
+        "endDate": -1,
+        "isCurrent": true,
+        "company": "Bizagi",
+        "position": "Senior Product Manager",
+        "description": ""
+      }
+    ],
+    "education": [
+
+    ],
+    "skills": [
+
+    ]
+  },
+  "es": {
+    "profileInfo": {
+      "name": "Ivan Amortegui",
+      "id": "80.039.249",
+      "idType": "CC"
+    },
+    "contactInfo": {
+      "address": "Calle 56 # 35a - 56 Apto 501",
+      "city": "Bogota, Colombia",
+      "phone": "(+571) 3873612",
+      "cellPhone": "(+57) 3002829854"
+    },
+    "profile": {
+      "profile": "Soy creativo y curioso, orientado a la gestión, diseño y desarrollo de productos. Tengo amplia experiencia como desarrollador Front End. Actualmente estoy enfocado en líderazgo técnico y gestión de productos."
+    },
+    "experience": [
+      {
+        "startingDate": 1501574400,
+        "endDate": -1,
+        "isCurrent": true,
+        "company": "Bizagi",
+        "position": "Senior Product Manager",
+        "description": ""
+      }
+    ],
+    "education": [
+
+    ],
+    "skills": [
+      
+    ]
+  }
+}

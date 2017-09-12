@@ -1,23 +1,24 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
+  <main id="app">
+    <top-bar app-name="Curriculum Vitae"></top-bar>
     <router-view></router-view>
-  </div>
+  </main>
 </template>
 
 <script>
+import TopBar from './components/TopBar';
+
 export default {
-  name: 'app',
+  components: { TopBar },
 };
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Open Sans', sans-serif;  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 5em;
 }
 </style>
