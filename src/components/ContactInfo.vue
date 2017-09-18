@@ -1,12 +1,12 @@
 <template>
   <div class="cvi-definition-list">
     <dl>
-      <dt>{{ $te('addressLabel') }}</dt>
+      <dt>{{ addressLabel }}</dt>
       <dd>
         <p>{{ info.address }}</p>
         <p>{{ info.city }}</p>
       </dd>
-      <dt>{{ $te('phoneLabel') }}</dt>
+      <dt>{{ phoneLabel }}</dt>
       <dd>
         <p>{{ info.phone }}</p>
         <p>{{ info.cellPhone }}</p>
@@ -15,30 +15,27 @@
   </div>
 </template>
 
-<i18n>
-{
-  "en": {
-    "addressLabel": "Address",
-    "phoneLabel": "Phone"
-  },
-  "es": {
-    "addressLabel": "Direccion",
-    "phoneLabel": "Telefono"
-  },
-  "fr": {
-    "addressLabel": "Adresse",
-    "phoneLabel": "Telephone"
-  }
-}
-</i18n>
-
 <script>
 export default {
   props: ['info'],
-  data() { return { locale: 'en' }; },
-  watch: {
-    locale(val) {
-      this.$i18n.locale = val;
+  data() {
+    return {
+      address: {
+        en: 'Address',
+        es: 'Dirección',
+      },
+      phone: {
+        en: 'Phone',
+        es: 'Teléfono',
+      },
+    };
+  },
+  computed: {
+    addressLabel() {
+      return this.address[this.$store.state.locale];
+    },
+    phoneLabel() {
+      return this.phone[this.$store.state.locale];
     },
   },
 };
