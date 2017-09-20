@@ -10,6 +10,9 @@ import TopBar from './components/TopBar';
 
 export default {
   components: { TopBar },
+  created() {
+    this.$store.dispatch('getInitialState');
+  },
 };
 </script>
 
