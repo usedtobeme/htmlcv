@@ -1,14 +1,10 @@
 import Vue from 'vue';
-import * as firebase from 'firebase';
-import config from './firebase.config';
 import App from './App';
 import router from './router';
 import store from './store';
 import './styles/main.css';
 
 Vue.config.productionTip = false;
-
-firebase.initializeApp(config);
 
 /* eslint-disable no-new */
 new Vue({
