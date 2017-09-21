@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import EditProfileInfo from './EdirProfileInfo';
+  import EditProfileInfo from './EditProfileInfo';
   import EditContactInfo from './EditContactInfo';
   import EditProfile from './EditProfile';
 

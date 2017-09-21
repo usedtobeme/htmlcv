@@ -3,13 +3,13 @@
     <dl>
       <dt>{{ addressLabel }}</dt>
       <dd>
-        <p>{{ info.address }}</p>
-        <p>{{ info.city }}</p>
+        <p>{{ address }}</p>
+        <p>{{ city }}, {{ country }}</p>
       </dd>
       <dt>{{ phoneLabel }}</dt>
       <dd>
-        <p>{{ info.phone }}</p>
-        <p>{{ info.cellPhone }}</p>
+        <p>{{ phone }}</p>
+        <p>{{ cellphone }}</p>
       </dd>
     </dl>
   </div>
@@ -17,14 +17,13 @@
 
 <script>
 export default {
-  props: ['info'],
   data() {
     return {
-      address: {
+      addressLbl: {
         en: 'Address',
         es: 'Dirección',
       },
-      phone: {
+      phoneLbl: {
         en: 'Phone',
         es: 'Teléfono',
       },
@@ -32,10 +31,25 @@ export default {
   },
   computed: {
     addressLabel() {
-      return this.address[this.$store.state.locale];
+      return this.addressLbl[this.$store.state.locale];
     },
     phoneLabel() {
-      return this.phone[this.$store.state.locale];
+      return this.phoneLbl[this.$store.state.locale];
+    },
+    address() {
+      return this.$store.state.contactInfo.address;
+    },
+    city() {
+      return this.$store.state.contactInfo.city;
+    },
+    country() {
+      return this.$store.state.contactInfo.country;
+    },
+    phone() {
+      return this.$store.state.contactInfo.phone;
+    },
+    cellphone() {
+      return this.$store.state.contactInfo.cellphone;
     },
   },
 };

@@ -1,16 +1,15 @@
 <template>
   <div class="cvi-profile">
     <h4>{{ profileLabel }}</h4>
-    <p>{{ info.profile }}</p>
+    <p>{{ profile }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['info'],
   data() {
     return {
-      profile: {
+      profileLbl: {
         en: 'Profile',
         es: 'Perfil',
       },
@@ -18,7 +17,10 @@ export default {
   },
   computed: {
     profileLabel() {
-      return this.profile[this.$store.state.locale];
+      return this.profileLbl[this.$store.state.locale];
+    },
+    profile() {
+      return this.$store.getters.profile;
     },
   },
 };

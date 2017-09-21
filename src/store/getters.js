@@ -1,3 +1,3 @@
-export const birthDate = state => new Date(state.profileInfo.birthStamp);
+export const profile = state => state.profile[state.locale];
 
 export const experience = state => state.experience;
