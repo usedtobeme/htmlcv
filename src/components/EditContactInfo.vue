@@ -5,17 +5,17 @@
     </h4>
     <form>
       <label for="address">Address:</label>
-      <input id="address" :value="address" @input="updateAddress">
+      <input id="address" :value="address" @input="updateAddress($event.target.value)">
       <label for="city">City:</label>
-      <input id="city" :value="city" @input="updateCity">
+      <input id="city" :value="city" @input="updateCity($event.target.value)">
       <label for="country">Country:</label>
-      <input id="country" :value="country" @input="updateCountry">
+      <input id="country" :value="country" @input="updateCountry($event.target.value)">
       <label for="phone">Phone:</label>
-      <input id="phone" :value="phone" @input="updatePhone">
+      <input id="phone" :value="phone" @input="updatePhone($event.target.value)">
       <label for="cellphone">Cellphone</label>
-      <input id="cellphone" :value="cellphone" @input="updateCellphone">
+      <input id="cellphone" :value="cellphone" @input="updateCellphone($event.target.value)">
     </form>
-    <contact-info></contact-info>  
+    <contact-info></contact-info>
   </div>
 </template>
 

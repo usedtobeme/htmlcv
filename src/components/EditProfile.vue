@@ -2,9 +2,9 @@
   <div>
     <form>
       <label for="profile">Profile English:</label>
-      <textarea id="profile" cols="30" rows="10" :value="profile" @input="updateProfile"></textarea>
+      <textarea id="profile" cols="30" rows="10" :value="profile" @input="updateProfile($event.target.value)"></textarea>
       <label for="perfil">Profile Spanish:</label>
-      <textarea id="perfil" cols="30" rows="10" :value="perfil" @input="updatePerfil"></textarea>
+      <textarea id="perfil" cols="30" rows="10" :value="perfil" @input="updatePerfil($event.target.value)"></textarea>
     </form>
     <profile></profile>
   </div>

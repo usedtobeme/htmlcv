@@ -6,6 +6,7 @@ export default {
     Vue.set(state, 'profileInfo', fbState.profileInfo);
     Vue.set(state, 'contactInfo', fbState.contactInfo);
     Vue.set(state, 'profile', fbState.profile);
+    Vue.set(state, 'experience', fbState.experience);
   },
 
   [types.UPDATE_NAME](state, { name }) {

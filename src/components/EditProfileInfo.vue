@@ -2,13 +2,13 @@
   <div>
     <form>
       <label for="name">Name:</label>
-      <input id="name" :value="name" @input="updateName">
+      <input id="name" :value="name" @input="updateName($event.target.value)">
       <label for="idType">ID Type:</label>
-      <input id="idType" :value="idType" @input="updateIdType">
+      <input id="idType" :value="idType" @input="updateIdType($event.target.value)">
       <label for="id">ID Number:</label>
-      <input id="id" :value="id" @input="updateId">
+      <input id="id" :value="id" @input="updateId($event.target.value)">
       <label for="birthDate">Birth Date</label>
-      <input type="date" id="birthDate" :value="birthDate" @input="updateBirthDate">
+      <input type="date" id="birthDate" :value="birthDate" @input="updateBirthDate($event.target.value)">
     </form>
     <profile-info></profile-info>
   </div>
