@@ -64,8 +64,8 @@ export const addNewExperience = () => {
   });
 };
 
-export const updateCompany = (key) => {
-  console.log(key);
+export const updateEntry = (context, payload) => {
+  firebase.database.ref(payload.path).set(payload.value);
 };
 // 'updateStartTime',
 // 'updateEndTime',

@@ -4,17 +4,17 @@
       <ul>
         <li v-for="(item, key) in experience" :key="key">
           <label>Company:</label>
-          <input :value="item.company" @input="updateCompany">
+          <input :value="item.company" @input="updateEntry({ path: `experience/${key}/company`, value: $event.target.value })">
           <label>Start Time:</label>
-          <input type="date" :value="item.startTime" @input="updateStartTime">
+          <input type="date" :value="item.startTime" @input="updateEntry({ path: `experience/${key}/startTime`, value: $event.target.value })">
           <label>End time:</label>
-          <input type="date" :value="item.endTime" @input="updateEndTime">
+          <input type="date" :value="item.endTime" @input="updateEntry({ path: `experience/${key}/endTime`, value: $event.target.value })">
           <label>Position:</label>
-          <input :value="item.position" @input="updatePosition">
+          <input :value="item.position" @input="updateEntry({ path: `experience/${key}/position`, value: $event.target.value })">
           <label>Description:</label>
-          <textarea :value="item.description.en" @input="updateDescription"></textarea>
+          <textarea :value="item.description.en" @input="updateEntry({ path: `experience/${key}/description/en`, value: $event.target.value })"></textarea>
           <label>Descripción</label>
-          <textarea cols="30" rows="10" :value="item.description.es" @input="updateDescripcion"></textarea>
+          <textarea cols="30" rows="10" :value="item.description.es" @input="updateEntry({ path: `experience/${key}/description/es`, value: $event.target.value })"></textarea>
         </li>
       </ul>
       <button @click="addNewExperience">+</button>
@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     ...mapActions([
-      'updateCompany',
+      'updateEntry',
       'updateStartTime',
       'updateEndTime',
       'updatePosition',
