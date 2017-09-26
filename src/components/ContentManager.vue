@@ -4,6 +4,7 @@
     <edit-contact-info></edit-contact-info>
     <edit-profile></edit-profile>
     <edit-experience></edit-experience>
+    <edit-education></edit-education>
   </div>
 </template>
 
@@ -12,6 +13,7 @@
   import EditContactInfo from './EditContactInfo';
   import EditProfile from './EditProfile';
   import EditExperience from './EditExperience';
+  import EditEducation from './EditEducation';
 
   export default {
     name: 'content-manager',
@@ -20,6 +22,7 @@
       EditContactInfo,
       EditProfile,
       EditExperience,
+      EditEducation,
     },
   };
 </script>

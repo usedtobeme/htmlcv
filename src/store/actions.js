@@ -64,11 +64,23 @@ export const addNewExperience = () => {
   });
 };
 
+export const addNewEducation = () => {
+  console.log('add new');
+  firebase.database.ref('education').push({
+    degree: {
+      en: '',
+      es: '',
+    },
+    university: '',
+    date: '',
+  });
+};
+
+export const removeEntry = (context, path) => {
+  firebase.database.ref(path).remove();
+};
+
 export const updateEntry = (context, payload) => {
   firebase.database.ref(payload.path).set(payload.value);
 };
-// 'updateStartTime',
-// 'updateEndTime',
-// 'updatePosition',
-// 'updateDescription',
-// 'updateDescripcion',
+

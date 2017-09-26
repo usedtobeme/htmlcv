@@ -15,6 +15,7 @@
           <textarea :value="item.description.en" @input="updateEntry({ path: `experience/${key}/description/en`, value: $event.target.value })"></textarea>
           <label>Descripción</label>
           <textarea cols="30" rows="10" :value="item.description.es" @input="updateEntry({ path: `experience/${key}/description/es`, value: $event.target.value })"></textarea>
+          <button @click="removeEntry(`experience/${key}`)">remove</button>
         </li>
       </ul>
       <button @click="addNewExperience">+</button>
@@ -37,11 +38,7 @@ export default {
   methods: {
     ...mapActions([
       'updateEntry',
-      'updateStartTime',
-      'updateEndTime',
-      'updatePosition',
-      'updateDescription',
-      'updateDescripcion',
+      'removeEntry',
       'addNewExperience',
     ]),
   },

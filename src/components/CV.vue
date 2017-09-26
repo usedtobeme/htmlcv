@@ -3,6 +3,7 @@
     <profile-info :info="personalData"></profile-info>
     <contact-info :info="contactInfo"></contact-info>
     <profile :info="profile"></profile>
+    <experience></experience>
   </section>
 </template>
 
@@ -10,6 +11,7 @@
 import ProfileInfo from './ProfileInfo';
 import ContactInfo from './ContactInfo';
 import Profile from './Profile';
+import Experience from './Experience';
 
 export default {
   name: 'cv',
@@ -36,6 +38,7 @@ export default {
     ProfileInfo,
     ContactInfo,
     Profile,
+    Experience,
   },
 };
 </script>
