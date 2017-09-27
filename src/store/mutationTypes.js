@@ -1,6 +1,2 @@
 export const GET_INITIAL_STATE = 'GET_INITIAL_STATE';
-
-export const UPDATE_NAME = 'UPDATE_NAME';
-export const UPDATE_ID_TYPE = 'UPDATE_ID_TYPE';
-export const UPDATE_ID = 'UPDATE_ID';
-export const UPDATE_BIRTHDATE = 'UPDATE_BIRTHDATE';
+export const SET_LOCALE = 'SET_LOCALE';

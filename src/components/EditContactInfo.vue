@@ -5,7 +5,7 @@
     </h4>
     <form>
       <label for="address">Address:</label>
-      <input id="address" :value="address" @input="updateAddress($event.target.value)">
+      <input id="address" :value="address" @input="updateEntry($event.target.value)">
       <label for="city">City:</label>
       <input id="city" :value="city" @input="updateCity($event.target.value)">
       <label for="country">Country:</label>
@@ -36,11 +36,7 @@
     },
     methods: {
       ...mapActions([
-        'updateAddress',
-        'updateCity',
-        'updateCountry',
-        'updatePhone',
-        'updateCellphone',
+        'updateEntry',
       ]),
     },
     components: {

@@ -4,9 +4,13 @@
     <div class="app-title">
       <h3>{{ appName }}</h3>
     </div>
+    <ul class="list languages">
+      <li class="clickable" v-if="locale !== 'en'" @click="setLocale('en')">EN</li>
+      <li class="clickable" v-if="localce !== 'es'" @click="setLocale('es')">ES</li>
+    </div>
     <icon-button
-      icon-name="download" 
-      :button-url="pdfPath" 
+      icon-name="download"
+      :button-url="pdfPath"
       icon-text-left="PDF"
     ></icon-button>
     <progress-bar :progress="styleProgress"></progress-bar>
@@ -14,6 +18,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import 'vue-awesome/icons/home';
 import 'vue-awesome/icons/download';
 import IconButton from './IconButton';
@@ -35,6 +40,14 @@ export default {
     styleProgress() {
       return `border-left-width: ${this.pageProgress}vw`;
     },
+    locale() {
+      return this.$store.state.locale;
+    },
+  },
+  methods: {
+    ...mapActions([
+      'setLocale',
+    ]),
   },
 };
 </script>
@@ -46,9 +59,9 @@ header {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  background-color: hsla(55, 50%, 90%, 0.5);
   color: hsl(0, 0%, 0%);
   text-transform: uppercase;
+  background-color: hsla(55, 50%, 90%, 0.9);
   padding: 1em;
   position: fixed;
   top: 0;
