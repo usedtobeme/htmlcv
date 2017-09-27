@@ -65,7 +65,6 @@ export const addNewExperience = () => {
 };
 
 export const addNewEducation = () => {
-  console.log('add new');
   firebase.database.ref('education').push({
     degree: {
       en: '',
@@ -73,6 +72,13 @@ export const addNewEducation = () => {
     },
     university: '',
     date: '',
+  });
+};
+
+export const addNewSkill = () => {
+  firebase.database.ref('skills').push({
+    name: '',
+    score: 0,
   });
 };
 
