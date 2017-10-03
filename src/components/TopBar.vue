@@ -4,10 +4,10 @@
     <div class="app-title">
       <h3>{{ appName }}</h3>
     </div>
-    <ul class="list languages">
+    <ul class="options-list languages">
       <li class="clickable" v-if="locale !== 'en'" @click="setLocale('en')">EN</li>
-      <li class="clickable" v-if="localce !== 'es'" @click="setLocale('es')">ES</li>
-    </div>
+      <li class="clickable" v-if="locale !== 'es'" @click="setLocale('es')">ES</li>
+    </ul>
     <icon-button
       icon-name="download"
       :button-url="pdfPath"
@@ -66,6 +66,11 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.options-list {
+  list-style: none;
+  padding: 0 1em;
 }
 
 .app-title {
