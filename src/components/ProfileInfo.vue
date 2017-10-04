@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="cvi-profile-info">
     <h1>{{name}}</h1>
     <p>{{idType}}: {{id}}</p>
-    <p>{{birthDate}}</p>
+    <p>{{birthDate.toLocaleDateString()}}</p>
   </div>
 </template>
 
@@ -19,8 +19,15 @@ export default {
       return this.$store.state.profileInfo.id;
     },
     birthDate() {
-      return this.$store.state.profileInfo.birthDate;
+      const date = this.$store.state.profileInfo.birthDate || '';
+      return new Date(date.replace('-', '/'));
     },
   },
 };
 </script>
+
+<style lang="postcss" scoped>
+.cvi-profile-info {
+  padding: 1em;
+}
+</style>

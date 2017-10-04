@@ -1,10 +1,10 @@
 <template>
   <section>
-    <profile-info></profile-info>
-    <contact-info></contact-info>
-    <profile></profile>
-    <experience></experience>
-    <education></education>
+    <profile-info class="row"></profile-info>
+    <profile class="row"></profile>
+    <contact-info class="row"></contact-info>
+    <experience class="row"></experience>
+    <education class="row"></education>
     <skills></skills>
   </section>
 </template>
@@ -31,6 +31,17 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="postcss" scoped>
+section {
+  padding: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
 
+.row {
+  flex: 1 0 100%;
+  padding: 1em;
+}
 </style>
+
