@@ -8,38 +8,20 @@
       <li class="clickable" v-if="locale !== 'en'" @click="setLocale('en')">EN</li>
       <li class="clickable" v-if="locale !== 'es'" @click="setLocale('es')">ES</li>
     </ul>
-    <icon-button
-      icon-name="download"
-      :button-url="pdfPath"
-      icon-text-left="PDF"
-    ></icon-button>
-    <progress-bar :progress="styleProgress"></progress-bar>
   </header>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
 import 'vue-awesome/icons/home';
-import 'vue-awesome/icons/download';
 import IconButton from './IconButton';
-import ProgressBar from './ProgressBar';
 
 export default {
   props: ['app-name'],
   components: {
     IconButton,
-    ProgressBar,
-  },
-  data() {
-    return {
-      pdfPath: '/assets/cv.pdf',
-      pageProgress: 0,
-    };
   },
   computed: {
-    styleProgress() {
-      return `border-left-width: ${this.pageProgress}vw`;
-    },
     locale() {
       return this.$store.state.locale;
     },

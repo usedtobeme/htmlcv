@@ -9,17 +9,14 @@ Vue.use(Vuex);
 const debug = process.env.NODE_ENV !== 'production';
 
 export default new Vuex.Store({
-  state: {
-    profileInfo: {},
-    contactInfo: {},
-    profile: {},
-    experience: {},
-    education: {},
-    skills: {},
-    locale: 'en',
-  },
-  actions,
-  getters,
-  mutations,
-  strict: debug,
+    state: {
+        profileInfo: {},
+        contactInfo: {},
+        profile: {},
+        locale: 'en',
+    },
+    actions,
+    getters,
+    mutations,
+    strict: debug,
 });
