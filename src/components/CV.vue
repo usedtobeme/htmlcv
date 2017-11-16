@@ -1,10 +1,10 @@
 <template>
-  <section>
-    <profile-info class="row"></profile-info>
-    <profile class="row"></profile>
-    <contact-info class="row"></contact-info>
-    <experience class="row"></experience>
-    <education class="row"></education>
+  <section class="wcv-main">
+    <profile-info class="wcv-profile-info row"></profile-info>
+    <profile class="wcv-profile row"></profile>
+    <contact-info class="wcv-contact-info row"></contact-info>
+    <experience class="wcv-experience row"></experience>
+    <education class="wcv-education row"></education>
     <skills></skills>
   </section>
 </template>
@@ -32,14 +32,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="postcss" scoped>
-section {
+.wcv-main {
   padding: 1em;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
 }
 
-.row {
+.wcv-main .row {
   flex: 1 0 100%;
   padding: 1em;
 }
