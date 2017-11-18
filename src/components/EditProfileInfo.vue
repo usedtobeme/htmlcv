@@ -2,13 +2,42 @@
   <div>
     <form>
       <label for="name">Name:</label>
-      <input id="name" :value="name" @input="updateName($event.target.value)">
+      <input
+        id="name"
+        :value="name"
+        @input="updateEntry({
+          path: `profileInfo/name`,
+          value: $event.target.value,
+        })"
+      />
       <label for="idType">ID Type:</label>
-      <input id="idType" :value="idType" @input="updateIdType($event.target.value)">
+      <input
+        id="idType"
+        :value="idType"
+        @input="updateEntry({
+          path: `profileInfo/idType`,
+          value: $event.target.value,
+        })"
+      />
       <label for="id">ID Number:</label>
-      <input id="id" :value="id" @input="updateId($event.target.value)">
+      <input
+        id="id"
+        :value="id"
+        @input="updateEntry({
+          path: `profileInfo/id`,
+          value: $event.target.value,
+        })"
+      />
       <label for="birthDate">Birth Date</label>
-      <input type="date" id="birthDate" :value="birthDate" @input="updateBirthDate($event.target.value)">
+      <input
+        type="date"
+        id="birthDate"
+        :value="birthDate"
+        @input="updateEntry({
+          path: `profileInfo/birthDate`,
+          value: $event.target.value,
+        })"
+      />
     </form>
     <profile-info></profile-info>
   </div>
@@ -30,10 +59,7 @@
     },
     methods: {
       ...mapActions([
-        'updateName',
-        'updateIdType',
-        'updateId',
-        'updateBirthDate',
+        'updateEntry',
       ]),
     },
     components: {

@@ -5,15 +5,50 @@
     </h4>
     <form>
       <label for="address">Address:</label>
-      <input id="address" :value="address" @input="updateEntry($event.target.value)">
+      <input
+        id="address"
+        :value="address"
+        @input="updateEntry({
+          path: `contactInfo/address`,
+          value: $event.target.value,
+        })"
+      />
       <label for="city">City:</label>
-      <input id="city" :value="city" @input="updateCity($event.target.value)">
+      <input
+        id="city"
+        :value="city"
+        @input="updateEntry({
+          path: `contactInfo/city`,
+          value: $event.target.value,
+        })"
+      />
       <label for="country">Country:</label>
-      <input id="country" :value="country" @input="updateCountry($event.target.value)">
+      <input
+        id="country"
+        :value="country"
+        @input="updateEntry({
+          path: `contactInfo/country`,
+          value: $event.target.value,
+        })"
+      />
       <label for="phone">Phone:</label>
-      <input id="phone" :value="phone" @input="updatePhone($event.target.value)">
+      <input
+        id="phone"
+        :value="phone"
+        @input="updateEntry({
+          path: `contactInfo/phone`,
+          value: $event.target.value,
+        })"
+      />
       <label for="cellphone">Cellphone</label>
-      <input id="cellphone" :value="cellphone" @input="updateCellphone($event.target.value)">
+      <input
+        id="cellphone"
+        :value="cellphone"
+        @input="updateEntry({
+          path: `contactInfo/cellphone`,
+          value: $event.target.value,
+        })"
+      />
     </form>
     <contact-info></contact-info>
   </div>

@@ -1,11 +1,17 @@
 <template>
   <section class="wcv-main">
-    <profile-info class="wcv-profile-info row"></profile-info>
-    <profile class="wcv-profile row"></profile>
-    <contact-info class="wcv-contact-info row"></contact-info>
-    <experience class="wcv-experience row"></experience>
-    <education class="wcv-education row"></education>
-    <skills></skills>
+    <el-row :gutter="10" :justify="end">
+      <el-col :xs="24" :sm="12" :md="8">
+        <profile-info class="wcv-profile-info row"></profile-info>
+        <contact-info class="wcv-contact-info row"></contact-info>
+      </el-col>
+      <el-col :xs="24" :sm="12" :md="16">
+        <profile class="wcv-profile row"></profile>
+        <experience class="wcv-experience row"></experience>        
+        <education class="wcv-education row"></education>    
+        <skills class="wcv-skills row"></skills>
+      </el-col>
+    </el-row>
   </section>
 </template>
 
