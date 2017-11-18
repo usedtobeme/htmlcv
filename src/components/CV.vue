@@ -1,6 +1,6 @@
 <template>
   <section class="wcv-main">
-    <el-row :gutter="10" :justify="end">
+    <el-row :gutter="10" :justify="'end'" :type="'flex'">
       <el-col :xs="24" :sm="12" :md="8">
         <profile-info class="wcv-profile-info row"></profile-info>
         <contact-info class="wcv-contact-info row"></contact-info>
