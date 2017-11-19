@@ -26,12 +26,8 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .cvi-profile {
   padding: 1em;
-}
-
-h4 {
-  text-transform: uppercase;
 }
 </style>

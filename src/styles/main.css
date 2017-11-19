@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -25,4 +26,16 @@
 .button .button-text {
   margin: 0 .5em;
   line-height: 1;
+}
+
+h4 {
+  font-size: 1.1em;
+  font-weight: 900;
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 0.9em;
+  margin-bottom: 0.2em;
 }

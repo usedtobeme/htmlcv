@@ -1,29 +1,37 @@
 <template>
-  <div>
-    <h4>Experience</h4>
-    <ul>
-      <li v-for="(item, key) in experience" :key="key">
-        <div>
-          <h5>{{ companyLabel }}</h5>
-          <p>{{ item.company }}</p>
-        </div>
-        <div>
+  <div class="wcv-experience">
+    <h4>{{ experienceLabel }}</h4>
+    <ul class="wcv-list">
+      <el-row
+        :tag="'li'"
+        :gutter="10"
+        :type="'flex'"
+        :justify="'start'"
+        v-for="(item, key) in experience" 
+        :key="key" 
+        class="wcv-list--item"
+      >
+        <el-col class="wcv-list--content" :sm="20">
           <h5>{{ positionLabel }}</h5>
           <p>{{ item.position }}</p>
-        </div>
-        <div>
+        </el-col>
+        <el-col class="wcv-list--content" :sm="20">
+          <h5>{{ companyLabel }}</h5>
+          <p>{{ item.company }}</p>
+        </el-col>
+        <el-col class="wcv-list--content" :sm="10">
           <h5>{{ startTimeLabel }}</h5>
           <p>{{ item.startTime }}</p>
-        </div>
-        <div v-if="item.endTIme">
+        </el-col>
+        <el-col class="wcv-list--content" :sm="10" v-if="item.endTime">
           <h5>{{ endTimeLabel }}</h5>
           <p>{{ item.endTime }}</p>
-        </div>
-        <div>
+        </el-col>
+        <el-col class="wcv-list--content" :sm="20">
           <h5>{{ descriptionLabel }}</h5>
           <p>{{ item.desc }}</p>
-        </div>
-      </li>
+        </el-col>
+      </el-row>
     </ul>
   </div>
 </template>
@@ -32,6 +40,10 @@
 export default {
   data() {
     return {
+      experienceLbl: {
+        en: 'Work Experience',
+        es: 'Experiencia Laboral',
+      },
       companyLbl: {
         en: 'Company',
         es: 'Empresa',
@@ -41,11 +53,11 @@ export default {
         es: 'Cargo',
       },
       startTimeLbl: {
-        en: 'Start date',
+        en: 'From',
         es: 'Desde',
       },
       endTimeLbl: {
-        en: 'End date',
+        en: 'Until',
         es: 'Hasta',
       },
       descriptionLbl: {
@@ -55,6 +67,9 @@ export default {
     };
   },
   computed: {
+    experienceLabel() {
+      return this.experienceLbl[this.$store.state.locale];
+    },
     companyLabel() {
       return this.companyLbl[this.$store.state.locale];
     },
@@ -77,3 +92,24 @@ export default {
 };
 
 </script>
+
+<style lang="postcss">
+.wcv-experience {
+  padding: 1em;
+}
+
+.wcv-list {
+  list-style: none;
+}
+
+.wcv-list--item {
+  margin: 1em 0;
+  flex-flow: row wrap
+}
+
+.wcv-list--content {
+  margin: 0.2em 0;
+}
+
+</style>
+

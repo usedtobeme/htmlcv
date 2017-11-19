@@ -1,15 +1,15 @@
 <template>
   <section class="wcv-main">
-    <el-row :gutter="10" :justify="'end'" :type="'flex'">
-      <el-col :xs="24" :sm="12" :md="8">
-        <profile-info class="wcv-profile-info row"></profile-info>
-        <contact-info class="wcv-contact-info row"></contact-info>
+    <el-row :gutter="10" :justify="'end'" :type="'flex'" class="wcv-row--wrap">
+      <el-col :xs="24" :sm="8" :md="8">
+        <profile-info></profile-info>
+        <contact-info></contact-info>
       </el-col>
-      <el-col :xs="24" :sm="12" :md="16">
-        <profile class="wcv-profile row"></profile>
-        <experience class="wcv-experience row"></experience>        
-        <education class="wcv-education row"></education>    
-        <skills class="wcv-skills row"></skills>
+      <el-col :xs="24" :sm="16" :md="16" class="wcv-column--pushdown">
+        <profile></profile>
+        <experience></experience>        
+        <education></education>    
+        <skills></skills>
       </el-col>
     </el-row>
   </section>
@@ -37,17 +37,20 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="postcss" scoped>
+<style lang="postcss">
 .wcv-main {
-  padding: 1em;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  margin: 0 2em;
 }
 
-.wcv-main .row {
-  flex: 1 0 100%;
-  padding: 1em;
+.wcv-row--wrap {
+  flex-flow: row wrap;
 }
+
+@media only screen and (min-width: 768px)  {
+  .wcv-column--pushdown {
+    margin-top: 4.7em;
+  }  
+}
+
 </style>
 

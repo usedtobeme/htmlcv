@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
+<style lang="postcss">
 .cvi-profile-info {
   padding: 1em;
 }
