@@ -38,7 +38,7 @@
 
 <style lang="postcss">
 .wcv-skills {
-  margin: 1em;
+  padding: 1em;
 }
 
 .wcv-list--wrap {

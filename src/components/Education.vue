@@ -4,6 +4,7 @@
     <ul class="wcv-list">
       <el-row
         class="wcv-list--item"
+        :tag="'li'"
         :type="'flex'"
         :justify="'start'"
         :gutter="10"
@@ -53,7 +54,7 @@ export default {
 
 <style lang="postcss">
 .wcv-education {
-  margin: 1em;
+  padding: 1em;
 }
 
 .wcv-list--content--bold {
