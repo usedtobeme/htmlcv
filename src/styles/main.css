@@ -39,3 +39,9 @@ h5 {
   font-size: 0.9em;
   margin-bottom: 0.2em;
 }
+
+@media print {
+  .hide-print {
+    display: none !important;
+  }
+}

@@ -1,6 +1,6 @@
 <template>
   <main id="app">
-    <top-bar app-name="Curriculum Vitae"></top-bar>
+    <top-bar class="hide-print" app-name="Curriculum Vitae"></top-bar>
     <router-view></router-view>
   </main>
 </template>

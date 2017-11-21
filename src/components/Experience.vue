@@ -12,11 +12,9 @@
         class="wcv-list--item"
       >
         <el-col class="wcv-list--content" :sm="20">
-          <h5>{{ positionLabel }}</h5>
-          <p>{{ item.position }}</p>
+          <p><strong>{{ item.position }}</strong></p>
         </el-col>
         <el-col class="wcv-list--content" :sm="20">
-          <h5>{{ companyLabel }}</h5>
           <p>{{ item.company }}</p>
         </el-col>
         <el-col class="wcv-list--content" :sm="10">
@@ -27,7 +25,7 @@
           <h5>{{ endTimeLabel }}</h5>
           <p>{{ item.endTime }}</p>
         </el-col>
-        <el-col class="wcv-list--content" :sm="20">
+        <el-col class="wcv-list--content" :sm="20" v-if="item.desc">
           <h5>{{ descriptionLabel }}</h5>
           <p>{{ item.desc }}</p>
         </el-col>
