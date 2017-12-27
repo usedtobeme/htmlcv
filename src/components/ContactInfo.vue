@@ -3,14 +3,13 @@
     <dl class="wcv-dl">
       <dt class="wcv-dl--title">{{ addressLabel }}</dt>
       <dd class="wcv-dl--content">
-        <p>{{ address }}</p>
         <p>{{ city }}, {{ country }}</p>
       </dd>
       <dt class="wcv-dl--title">{{ phoneLabel }}</dt>
-      <dd>
+      <dd class="wcv-dl--content">
         <p>{{ phone }}</p>
         <p>{{ cellphone }}</p>
-      </dd class="wcv-dl--content">
+      </dd>
     </dl>
   </div>
 </template>
